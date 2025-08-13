@@ -62,7 +62,7 @@ COCO_CLASSES = [
 ]
 
 # Target sets
-TARGET_ANIMALS = {"elephant","bear","zebra","giraffe","cow","horse","sheep","dog","cat"}
+TARGET_ANIMALS = {"elephant","bear","lion","tiger","dog","cat"}
 # Knife is in COCO; gun needs custom YOLO to be reliable
 TARGET_WEAPONS_COCO = {"knife"}     # detected by COCO/TF-Hub
 TARGET_WEAPONS_YOLO = {"knife","gun","pistol","rifle","firearm"}  # YOLO names may vary
@@ -249,6 +249,7 @@ while True:
     if violence_detected:
         alert_info.append("Violence/fight behaviour detected by motion analysis")
         alert_triggered = True
+        
 
     if alert_triggered and (now - last_alert_time) >= ALERT_COOLDOWN:
         last_alert_time = now
