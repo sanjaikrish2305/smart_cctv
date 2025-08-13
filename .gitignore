@@ -1,0 +1,19 @@
+# VS Code settings and workspace files
+.vscode/
+
+# Python byte-compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / build artifacts
+build/
+dist/
+*.egg-info/
+
+# Environment files
+.env
+
+# System files
+.DS_Store
+Thumbs.db

@@ -14,6 +14,7 @@ import numpy as np
 import smtplib
 from email.message import EmailMessage
 import requests
+from dotenv import load_dotenv
 
 # Optional: ultralytics for YOLO weapon detection
 from ultralytics import YOLO
@@ -21,9 +22,10 @@ from ultralytics import YOLO
 import tensorflow_hub as hub
 
 # ---------------- CONFIG ----------------
-SENDER_EMAIL = "cctvcamers705@gmail.com"
-SENDER_PASS  = "dlpx nefx xgco pylu"
-RECEIVER_EMAIL = "sanjaisan2325@gmail.com"
+load_dotenv()
+SENDER_EMAIL = os.getenv("SENDER_EMAIL")
+SENDER_PASS = os.getenv("SENDER_PASS")
+RECEIVER_EMAIL = os.getenv("RECEIVER_EMAIL")
 
 # Telegram optional
 TELEGRAM_BOT_TOKEN = None   # "123:ABC..."
